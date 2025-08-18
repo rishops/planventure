@@ -1,11 +1,11 @@
-# Building the Planventure API with GitHub Copilot
+# Building the Planventure API with Gemini Code Assist
 
-This guide will walk you through creating a Flask-based REST API with SQLAlchemy and JWT authentication using GitHub Copilot to accelerate development.
+This guide will walk you through creating a Flask-based REST API with SQLAlchemy and JWT authentication using Gemini Code Assist to accelerate development.
 
 ## Prerequisites
 
 - Python 3.8 or higher
-- VS Code with GitHub Copilot extension
+- VS Code with Gemini Code Assist extension
 - Bruno API Client (for testing API endpoints)
 - Git installed
 
@@ -20,16 +20,16 @@ We'll be working in the `api-start` branch and creating a structured API with:
 ## Step 1: Project Setup
 ### Prompts to Configure Flask with SQLAlchemy
 
-Open Copilot Chat and type:
+Open GCA chat and type:
 ```
-@workspace Update the Flask app with SQLAlchemy and basic configurations
+Update the Flask app with SQLAlchemy and basic configurations
 ```
 
-When the code is generated, click "Apply in editor" to update your `app.py` file.
+When the code is generated, click "Accept (WriteFile)" to update your `app.py` file.
 
 ### Update Dependencies
 
-In Copilot Chat, type:
+In GCA chat, type:
 ```
 update requirements.txt with necessary packages for Flask API with SQLAlchemy and JWT
 ```
@@ -47,7 +47,7 @@ Create a `.env` file for environment variables and add it to `.gitignore`.
 
 ### User Model
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Create SQLAlchemy User model with email, password_hash, and timestamps. add code in new files
 ```
@@ -56,7 +56,7 @@ Review and accept the generated code.
 
 ### Initialize Database Tables
 
-Ask Copilot to create a database initialization script:
+Ask Gemini Code Assist to create a database initialization script:
 ```
 update code to be able to create the db tables with a python shell script
 ```
@@ -75,7 +75,7 @@ python init_db.py
 
 ### Trip Model
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Create SQLAlchemy Trip model with user relationship, destination, start date, end date, coordinates and itinerary
 ```
@@ -89,14 +89,14 @@ python3 init_db.py
 
 Use Source Control in VS Code:
 1. Stage all changes
-2. Click the sparkle icon to generate a commit message with Copilot
+2. Click the sparkle icon to generate a commit message with Gemini Code Assist
 3. Click commit
 
 ## Step 3: Authentication System
 
 ### Password Hashing Utilities
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Create password hashing and salt utility functions for the User model
 ```
@@ -108,7 +108,7 @@ pip install bcrypt
 
 ### JWT Token Functions
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Setup JWT token generation and validation functions
 ```
@@ -120,7 +120,7 @@ pip install flask-jwt-extended
 
 ### Registration Route
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Create auth routes for user registration with email validation
 ```
@@ -144,7 +144,7 @@ Use Bruno API Client:
 
 ### Login Route
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Create login route with JWT token generation
 ```
@@ -162,7 +162,7 @@ flask run
 
 ### Authentication Middleware
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Create auth middleware to protect routes
 ```
@@ -171,13 +171,13 @@ Review and accept the changes.
 
 ### Commit Your Changes
 
-Use Source Control and Copilot to create a commit message.
+Use Source Control and Gemini Code Assist to create a commit message.
 
 ## Step 4: Trip Routes
 
 ### Create Trip Routes Blueprint
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Create Trip routes blueprint with CRUD operations
 ```
@@ -194,7 +194,7 @@ Use Bruno API Client to test:
 
 ### Add Itinerary Template Generator
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Create function to generate default itinerary template
 ```
@@ -205,7 +205,7 @@ Review, accept changes, and test the updated route.
 
 ### Configure CORS for Frontend Access
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Setup CORS configuration for React frontend
 ```
@@ -214,7 +214,7 @@ Review and accept the changes.
 
 ### Add Health Check Endpoint
 
-In Copilot Edits, type:
+In GCA chat, type:
 ```
 Create basic health check endpoint
 ```
@@ -223,11 +223,11 @@ Review and accept the changes.
 
 ### Commit Final Changes
 
-Use Source Control with Copilot to create your final commit.
+Use Source Control with Gemini Code Assist to create your final commit.
 
 ### Create README
 
-Ask Copilot to write a comprehensive README for your API project.
+Ask Gemini Code Assist to write a comprehensive README for your API project.
 
 ## Common Issues and Solutions
 
