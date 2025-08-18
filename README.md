@@ -1,23 +1,17 @@
 # Planventure API 🚁
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github-samples/planventure)
-
 A Flask-based REST API backend for the Planventure application.
 
 ## Prerequisites
 Before you begin, ensure you have the following:
 
 - A GitHub account - [sign up for FREE](https://github.com)
-- Access to GitHub Copilot - [sign up for FREE](https://gh.io/gfb-copilot)!
 - A Code Editor - [VS Code](https://code.visualstudio.com/download) is recommended
+- Access to Gemini Code Assist
 - API Client (like [Bruno](https://github.com/usebruno/bruno))
 - Git - [Download & Install Git](https://git-scm.com/downloads)
 
 ## 🚀 Getting Started
-
-## Build along in a Codespace
-
-1. Click the "Open in GitHub Codespaces" button above to start developing in a GitHub Codespace.
 
 ### Local Development Setup
 
