@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: Planventure API
+  version: 1.0.0
+paths:
+  /health:
+    get:
+      summary: Health Check
+      description: Checks the health and operational status of the API and its critical dependencies.
+      responses:
+        '200':
+          description: API is operational.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: operational
+        '503':
+          description: API is degraded or unhealthy due to dependency issues.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: degraded
+                  details:
+                    type: string
+                    example: Database connection failed

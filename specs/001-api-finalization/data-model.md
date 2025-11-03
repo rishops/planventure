@@ -1,0 +1,1 @@
+This feature focuses on API configuration and monitoring and does not introduce new data entities.

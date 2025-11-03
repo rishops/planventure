@@ -14,7 +14,8 @@ bcrypt = Bcrypt()
 
 def create_app():
     app = Flask(__name__)
-    CORS(app)
+    allowed_origins = os.environ.get('CORS_ALLOWED_ORIGINS', '*').split(',')
+    CORS(app, resources={r"/*": {"origins": allowed_origins}})
 
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
     app.config['JWT_SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY')
@@ -36,7 +37,12 @@ def create_app():
 
     @app.route('/health')
     def health_check():
-        return jsonify({"status": "healthy"})
+        try:
+            # Attempt to connect to the database
+            db.session.execute(db.text('SELECT 1'))
+            return jsonify({"status": "operational"})
+        except Exception as e:
+            return jsonify({"status": "degraded", "details": str(e)}), 503
 
     return app
 
