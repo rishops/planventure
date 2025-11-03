@@ -144,6 +144,7 @@ Create the database tables and test the new endpoints.
 ```bash
 python init_db.py
 ```
+(optional)
 Use the Bruno API Client to test the `/auth/register` and `/auth/login` endpoints as described in the original `PROMPTS.md` to verify the implementation.
 
 ## Step 4: The Trips Feature

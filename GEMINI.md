@@ -24,6 +24,7 @@ cd src [ONLY COMMANDS FOR ACTIVE TECHNOLOGIES][ONLY COMMANDS FOR ACTIVE TECHNOLO
 Python 3.11+: Follow standard conventions
 
 ## Recent Changes
+- 003-trip-management: Added Python 3.11+ + Flask, SQLAlchemy, Flask-JWT-Extended, bcryp
 - 002-user-auth: Added Python 3.11+ + Flask, SQLAlchemy, Flask-JWT-Extended, bcryp
 
 - 001-initial-api-setup: Added Python 3.11+ + Flask, Flask-SQLAlchemy, Flask-JWT-Extended, bcrypt, python-dotenv

@@ -27,6 +27,9 @@ def create_app():
     from auth.routes import auth_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
 
+    from trips.routes import trips_bp
+    app.register_blueprint(trips_bp, url_prefix='/trips')
+
     @app.route('/')
     def home():
         return jsonify({"message": "Welcome to PlanVenture API"})

@@ -1,0 +1,75 @@
+openapi: 3.0.0
+info:
+  title: Trip Management API
+  version: 1.0.0
+paths:
+  /trips:
+    get:
+      summary: Get all trips
+      responses:
+        '200':
+          description: A list of trips
+    post:
+      summary: Create a new trip
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Trip'
+      responses:
+        '201':
+          description: Trip created
+  /trips/{tripId}:
+    get:
+      summary: Get a single trip
+      parameters:
+        - name: tripId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A single trip
+    put:
+      summary: Update a trip
+      parameters:
+        - name: tripId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Trip'
+      responses:
+        '200':
+          description: Trip updated
+    delete:
+      summary: Delete a trip
+      parameters:
+        - name: tripId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Trip deleted
+components:
+  schemas:
+    Trip:
+      type: object
+      properties:
+        name:
+          type: string
+        start_date:
+          type: string
+          format: date
+        end_date:
+          type: string
+          format: date
