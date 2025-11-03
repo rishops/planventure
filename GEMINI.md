@@ -3,6 +3,8 @@
 Auto-generated from all feature plans. Last updated: 2025-11-03
 
 ## Active Technologies
+- Python 3.11+ + Flask, SQLAlchemy, Flask-JWT-Extended, bcryp (002-user-auth)
+- SQLite (for development) (002-user-auth)
 
 - Python 3.11+ + Flask, Flask-SQLAlchemy, Flask-JWT-Extended, bcrypt, python-dotenv (001-initial-api-setup)
 
@@ -22,6 +24,7 @@ cd src [ONLY COMMANDS FOR ACTIVE TECHNOLOGIES][ONLY COMMANDS FOR ACTIVE TECHNOLO
 Python 3.11+: Follow standard conventions
 
 ## Recent Changes
+- 002-user-auth: Added Python 3.11+ + Flask, SQLAlchemy, Flask-JWT-Extended, bcryp
 
 - 001-initial-api-setup: Added Python 3.11+ + Flask, Flask-SQLAlchemy, Flask-JWT-Extended, bcrypt, python-dotenv
 
