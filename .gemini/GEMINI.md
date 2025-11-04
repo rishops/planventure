@@ -34,6 +34,6 @@ REST API backend for a planning/travel application (Planventure).
 ```
   cd planventure-api
   source venv/bin/activate
-  python3 -m unittest discover tests
+  python3 -m unittest discover -v tests
 ```
 If virtual environment named venv is not initialized, run `python3 -m venv venv` inside `planventure-api` directory.
