@@ -1,15 +1,34 @@
-Project Type: REST API backend for a planning/travel application (Planventure).
+# Planventure Project Overview
 
-Tech Stack:
-- Python (Flask framework - inferred from README and Dockerfile base image)
-- Docker (for development environment)
-- Git (for version control)
+This document provides a high-level overview of the Planventure project, including its architecture, technology stack, and key development guidelines.
 
-Architecture:
-- Basic REST API. Likely a single-tier architecture initially, with Flask handling routing and request processing. Data persistence is not explicitly defined in the provided files, but would be required for a functional API.
+## Important Documents
 
-Key Features:
-- The repository provides a starting point for building a REST API. The specific features of the Planventure application are not detailed in the provided files, but based on the name, it likely involves:
-    - Planning trips/events
-    - Managing travel itineraries
-    - Potentially user authentication
+- **Development Guidelines:** @../GEMINI.md
+- **Project Constitution:** @../.specify/memory/constitution.md
+
+## Project Type
+
+REST API backend for a planning/travel application (Planventure).
+
+## Tech Stack
+
+- **Language:** Python 3.11+
+- **Framework:** Flask
+- **Database:** SQLAlchemy with SQLite for development
+- **Authentication:** JWT using Flask-JWT-Extended
+- **Password Hashing:** bcrypt
+- **CORS:** Flask-CORS
+- **Environment Variables:** python-dotenv
+
+## Architecture
+
+- The application is structured using Flask Blueprints to create a modular and reusable API.
+- Current blueprints include `auth` and `trips`.
+- The main application is created in `planventure-api/app.py`.
+
+## Commands
+
+- **Run application:** `cd planventure-api && python app.py`
+- **Run tests:** `cd planventure-api && pytest`
+- **Linter:** `ruff check .`
